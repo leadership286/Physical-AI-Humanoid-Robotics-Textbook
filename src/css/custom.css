@@ -1,0 +1,138 @@
+/* src/css/custom.css */
+
+/* 🎨 Primary & Secondary Gradient Colors */
+:root {
+  --ifm-color-primary: #6a11cb; /* Purple */
+  --ifm-color-secondary: #2575fc; /* Blue */
+  --glow-color: #ffd700; /* Gold Glow */
+}
+
+/* 🌈 Background Gradient */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+/* ⚡ Light & Dark Mode Support */
+[data-theme='light'] {
+  body {
+    background: linear-gradient(135deg, #e0e0ff, #c0e0ff);
+    color: #111111;
+  }
+  h1, h2, h3, h4 {
+    color: #111111;
+  }
+  a {
+    color: #6a11cb;
+  }
+}
+
+[data-theme='dark'] {
+  body {
+    background: linear-gradient(135deg, #5e9b26, #f50ea8);
+    color: #ffffff;
+  }
+  h1, h2, h3, h4 {
+    color: #ffffff;
+  }
+  a {
+    color: #ffd700;
+  }
+}
+
+/* Navbar & Footer */
+.navbar, .footer {
+  background: linear-gradient(135deg, #f043d3, #2575fc);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* Buttons */
+button, .button, .btn {
+  background: linear-gradient(135deg, var(--ifm-color-primary), var(--ifm-color-secondary));
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 12px rgba(255,255,255,0.3), 0 0 24px rgba(255, 215, 0, 0.4);
+}
+button:hover, .button:hover, .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(255,255,255,0.5), 0 0 36px rgba(255, 215, 0, 0.6);
+}
+
+/* Images Glow */
+img {
+  transition: all 0.3s ease-in-out;
+  border-radius: 12px;
+}
+img:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 215, 0, 0.5);
+  transform: scale(1.03);
+}
+
+/* Cards / Doc boxes */
+.card, .docCard {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1rem 0;
+  transition: all 0.3s ease-in-out;
+}
+.card:hover, .docCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 12px rgba(255,255,255,0.3), 0 0 24px rgba(255,215,0,0.3);
+}
+
+/* Code blocks */
+.theme-light pre, .theme-dark pre {
+  background: rgba(0,0,0,0.7);
+  border-left: 4px solid var(--ifm-color-secondary);
+  border-radius: 6px;
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  margin: 1rem 0;
+  width: 100%;
+}
+table th, table td {
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 0.6rem;
+  text-align: left;
+}
+table th {
+  background: rgba(255,255,255,0.1);
+  color: #ffffff;
+}
+table tr:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+/* Smooth transitions for all */
+* {
+  transition: all 0.3s ease-in-out;
+}
